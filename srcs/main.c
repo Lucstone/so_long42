@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:55:24 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/11 19:34:24 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/12 14:20:46 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	program(int argc, char *argv, t_data *prg)
 {
 	prg->map.map = array(prg->end.fd, argc, argv);
-	ft_printmap(prg->map.map);
 	prg->mlx = mlx_init();
 	prg->window = ft_windows(prg->mlx, (argc),
 			ft_strlen(prg->map.map[1]));

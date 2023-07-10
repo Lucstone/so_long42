@@ -6,7 +6,7 @@
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 15:49:24 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/11 19:34:40 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/12 14:18:35 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	ft_coin(t_data *img, char **tab, int width, int height)
 	int	i;
 	int	j;
 
-	img->sprite = ft_new_sprite(img->mlx, "./sprites/bone.xpm");
+	img->sprite = ft_new_sprite(img->mlx, "./sprites/biere.xpm");
 	img->position.y = 0;
 	img->position.x = 0;
 	i = 0;

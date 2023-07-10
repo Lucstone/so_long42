@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   So_long.h                                          :+:      :+:    :+:   */
+/*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lnaidu <lnaidu@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 13:37:18 by lnaidu            #+#    #+#             */
-/*   Updated: 2023/01/11 19:33:20 by lnaidu           ###   ########.fr       */
+/*   Updated: 2023/01/12 13:03:43 by lnaidu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,48 +25,47 @@
 # include <stdlib.h>
 # include <ctype.h>
 
-int	verifber(char *file);
-int	verifchar(char *file, int fd);
-int	verifsize(int fd);
-int	verifwall(int fd, int k);
-int	topend(char *gnl, int i);
-int	verifdbl(char *file, int fd);
-int	lengnl(int fd);
-int	checkerror(char **argv);
-char	**array(int fd, int k, char *file);
-void	**ft_printmap(char **tab);
+int			verifber(char *file);
+int			verifchar(char *file, int fd);
+int			verifsize(int fd);
+int			verifwall(int fd, int k);
+int			topend(char *gnl, int i);
+int			verifdbl(char *file, int fd);
+int			lengnl(int fd);
+int			checkerror(char **argv);
+char		**array(int fd, int k, char *file);
+void		**ft_printmap(char **tab);
 
-typedef struct	s_cerror
+typedef struct s_cerror
 {
-	int c;
+	int	c;
 	int	e;
-	int p;
-	int fd;
-	int k;
+	int	p;
+	int	fd;
+	int	k;
 }				t_cerror;
 
-typedef struct	s_map
+typedef struct s_map
 {
-	int	count;
-	int coin;
-	int i;
-	int j;
-	char **map;
+	int		count;
+	int		coin;
+	int		i;
+	int		j;
+	char	**map;
 }				t_map;
-
-typedef struct	s_vector
+typedef struct s_vector
 {
-	int x;
+	int	x;
 	int	y;
 }				t_vector;
 
-typedef struct	s_window 
+typedef struct s_window
 {
 	void		*reference;
 	t_vector	size;
 }				t_window;
 
-typedef struct	s_image 
+typedef struct s_image
 {
 	void		*reference;
 	t_vector	size;
@@ -76,14 +75,14 @@ typedef struct	s_image
 	int			endian;
 }				t_image;
 
-typedef struct	s_back
+typedef struct s_back
 {
 	int			coins;
 	char		**back;
 	t_vector	size;
 }				t_back;
 
-typedef struct	s_data 
+typedef struct s_data
 {
 	void		*mlx;
 	t_window	window;
@@ -96,18 +95,16 @@ typedef struct	s_data
 
 t_window	ft_windows(void *mlx, int height, int width);
 t_image		ft_new_sprite(void *mlx, char *path);
-void	ft_background(t_data *img, int height, int width);
-void	ft_wall(t_data *img, char **tab, int width, int height);
-int	ft_input(int key, void *param);
-int	ft_update (void *param);
+void		ft_background(t_data *img, int height, int width);
+void		ft_wall(t_data *img, char **tab, int width, int height);
+int			ft_input(int key, void *param);
 t_vector	ft_player(t_data *img, char **tab, int width, int height);
-void	ft_coin(t_data *img, char **tab, int width, int height);
-void	ft_exit(t_data *img, char **tab, int width, int height);
-int	ft_count(char **tab);
-
-int	get_len(char **str);
-void	free_str(char **str);
-int	back_tracking(t_data *v, char	*file);
-int	ft_close(void);
+void		ft_coin(t_data *img, char **tab, int width, int height);
+void		ft_exit(t_data *img, char **tab, int width, int height);
+int			ft_count(char **tab);
+int			get_len(char **str);
+void		free_str(char **str);
+int			back_tracking(t_data *v, char	*file);
+int			ft_close(void);
 
 #endif
